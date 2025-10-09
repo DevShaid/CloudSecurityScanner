@@ -5,10 +5,10 @@ services:
     image: localstack/localstack:latest
     container_name: localstack
     ports:
-      - "4566:4566"   # Edge port for AWS CLI
+      - "4566:4566"   
     environment:
       - SERVICES=iam,s3,sts
       - DEFAULT_REGION=us-east-1
       - DATA_DIR=/tmp/localstack/data
     volumes:
-      []
+      [] #for testing 

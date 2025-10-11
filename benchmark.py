@@ -1,7 +1,4 @@
 #!/usr/bin/env python3
-"""
-Performance benchmarking for CloudGuard Enhanced
-"""
 
 import time
 import argparse
@@ -10,7 +7,7 @@ from typing import Dict, List, Any
 import json
 from datetime import datetime, timezone
 
-# Mock AWS responses for benchmarking
+
 MOCK_S3_BUCKETS = [
     {"Name": f"test-bucket-{i}"} for i in range(100)
 ]
@@ -62,7 +59,7 @@ class MockAWSScanner:
         """Mock S3 bucket scanning"""
         findings = []
         for bucket in MOCK_S3_BUCKETS:
-            # Simulate finding public access
+          
             findings.append({
                 "id": f"s3-public-{bucket['Name']}",
                 "title": "S3 Bucket Public Access",
@@ -75,7 +72,7 @@ class MockAWSScanner:
         """Mock IAM scanning"""
         findings = []
         for user in MOCK_IAM_USERS:
-            # Simulate finding unused keys
+         
             findings.append({
                 "id": f"iam-unused-key-{user['UserName']}",
                 "title": "Unused IAM Access Key",
@@ -88,7 +85,7 @@ class MockAWSScanner:
         """Mock EC2 security group scanning"""
         findings = []
         for sg in MOCK_SECURITY_GROUPS:
-            # Simulate finding public access
+            
             findings.append({
                 "id": f"ec2-sg-open-{sg['GroupId']}",
                 "title": "Security Group Public Access",
@@ -101,7 +98,7 @@ class MockAWSScanner:
         """Mock RDS scanning"""
         findings = []
         for db in MOCK_RDS_INSTANCES:
-            # Simulate finding public access
+           
             findings.append({
                 "id": f"rds-public-{db['DBInstanceIdentifier']}",
                 "title": "RDS Public Access",
@@ -132,7 +129,7 @@ class MockAWSScanner:
         
         start_time = time.time()
         
-        # Run mock scans
+        
         scan_methods = [
             ("S3 Buckets", self.mock_scan_s3_buckets),
             ("IAM Users", self.mock_scan_iam),
@@ -156,12 +153,12 @@ class MockAWSScanner:
         
         total_duration = time.time() - start_time
         
-        # Calculate statistics
+       
         severity_counts = {"CRITICAL": 0, "HIGH": 0, "MEDIUM": 0, "LOW": 0}
         for finding in all_findings:
             severity_counts[finding["severity"]] += 1
         
-        # Calculate security score
+       
         deductions = (
             severity_counts["CRITICAL"] * 15 +
             severity_counts["HIGH"] * 10 +
@@ -170,7 +167,7 @@ class MockAWSScanner:
         )
         security_score = max(0, 100 - deductions)
         
-        # Determine grade
+       
         if security_score >= 90:
             grade = "A"
         elif security_score >= 80:
@@ -247,7 +244,7 @@ def main():
         "enterprise": {"buckets": 1000, "users": 500, "sgs": 2000, "rds": 200, "lambda": 1000}
     }
     
-    # Update mock data based on account size
+    
     config = account_configs[args.account_size]
     global MOCK_S3_BUCKETS, MOCK_IAM_USERS, MOCK_SECURITY_GROUPS, MOCK_RDS_INSTANCES, MOCK_LAMBDA_FUNCTIONS
     
@@ -286,18 +283,18 @@ def main():
     scanner = MockAWSScanner(workers=args.workers)
     results = scanner.run_benchmark(args.account_size)
     
-    # Print results
+
     scanner.print_results(results)
     
-    # Save results if requested
+
     if args.output:
         with open(args.output, 'w') as f:
             json.dump(results, f, indent=2)
         print(f"\n💾 Results saved to: {args.output}")
     
-    # Performance recommendations
+  
     print(f"\n💡 Performance Recommendations:")
-    if results['total_duration'] > 300:  # 5 minutes
+    if results['total_duration'] > 300:  
         print("   ⚠️  Consider increasing workers for faster scanning")
     if results['performance_metrics']['parallel_efficiency'] < 2:
         print("   ⚠️  Low parallel efficiency - check for I/O bottlenecks")

@@ -11,23 +11,23 @@ from cg import AWSScanner, Finding, Severity, SecurityScoreCalculator, ReportGen
 
 
 class TestAWSScanner:
-    """Test cases for AWSScanner class"""
+
     
     def setup_method(self):
-        """Set up test fixtures"""
+      
         self.mock_session = Mock()
         self.mock_session.client.return_value = Mock()
         self.scanner = AWSScanner(session=self.mock_session, verbose=True)
         self.scanner.account_id = "123456789012"
     
     def test_scanner_initialization(self):
-        """Test scanner initialization"""
+       
         assert self.scanner.account_id == "123456789012"
         assert self.scanner.verbose is True
         assert self.scanner.max_workers == 8
     
     def test_make_finding(self):
-        """Test finding creation"""
+       
         finding = self.scanner._make_finding(
             id="test-finding",
             title="Test Finding",
@@ -47,7 +47,7 @@ class TestAWSScanner:
     
     @patch('cg.AWSClientManager.get_client')
     def test_scan_s3_buckets_no_issues(self, mock_get_client):
-        """Test S3 scanning with no issues"""
+     
         mock_s3 = Mock()
         mock_s3.list_buckets.return_value = {"Buckets": []}
         mock_get_client.return_value = mock_s3
@@ -57,7 +57,7 @@ class TestAWSScanner:
     
     @patch('cg.AWSClientManager.get_client')
     def test_scan_s3_buckets_public_access(self, mock_get_client):
-        """Test S3 scanning with public access issues"""
+        
         mock_s3 = Mock()
         mock_s3.list_buckets.return_value = {
             "Buckets": [{"Name": "test-bucket"}]
@@ -72,7 +72,7 @@ class TestAWSScanner:
     
     @patch('cg.AWSClientManager.get_client')
     def test_scan_iam_root_mfa_disabled(self, mock_get_client):
-        """Test IAM scanning with root MFA disabled"""
+        
         mock_iam = Mock()
         mock_iam.get_account_summary.return_value = {
             "SummaryMap": {"AccountMFAEnabled": 0}
@@ -87,7 +87,7 @@ class TestAWSScanner:
     
     @patch('cg.AWSClientManager.get_client')
     def test_scan_ec2_sgs_public_access(self, mock_get_client):
-        """Test EC2 security group scanning with public access"""
+       
         mock_ec2 = Mock()
         mock_ec2.describe_security_groups.return_value = {
             "SecurityGroups": [{

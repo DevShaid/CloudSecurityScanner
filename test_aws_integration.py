@@ -1,6 +1,3 @@
-"""
-Integration tests for CloudGuard Enhanced with AWS
-"""
 
 import pytest
 import boto3
@@ -12,24 +9,23 @@ from cg import AWSScanner, Finding, Severity
 
 
 class TestAWSIntegration:
-    """Integration tests with AWS services using moto"""
+   
     
     def setup_method(self):
-        """Set up test fixtures"""
+       
         self.scanner = AWSScanner(verbose=True)
         self.scanner.account_id = "123456789012"
     
     @mock_s3
     def test_s3_integration_public_bucket(self):
-        """Test S3 integration with public bucket"""
-        # Create mock S3 client
+      
         s3 = boto3.client('s3', region_name='us-east-1')
         
-        # Create a bucket
+       
         bucket_name = "test-public-bucket"
         s3.create_bucket(Bucket=bucket_name)
         
-        # Make bucket public (simulate no public access block)
+       
         with patch.object(s3, 'get_public_access_block', side_effect=Exception("No public access block")):
             findings = self.scanner.scan_s3_buckets()
             

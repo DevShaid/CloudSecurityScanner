@@ -1,4 +1,10 @@
-# 🛡️ CloudGuard Enhanced - Enterprise AWS Security Scanner
+#TLDR:
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDBwc3djNmo0NGtlZjYwem5qOGZ5cnU1YzNoZHpyYWcyczBrYzA2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pULj9CGmIcfuzXTPfp/giphy.gif" alt="Glowing Star" width="100">
+  <br>
+  <b>⭐ Pretty Please Star this Repo if You Enjoy It! ⭐</b>
+</p>
+
+# 🛡️ CloudGuard - AWS Security Scanner
 
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

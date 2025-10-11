@@ -34,14 +34,14 @@
 - **🔑 Secrets Manager**: Rotation status, unused secrets, replication compliance
 - **⚡ Lambda Functions**: Deprecated runtimes, public URLs, overly permissive policies
 
-### 📊 **Advanced Reporting**
+### 📊 **Reporting**
 - **🎯 Risk Scoring**: 0-100 scoring with severity-based deductions (A-F grades)
 - **📋 Structured Output**: JSON with metadata for automation pipelines
 - **🌐 HTML Reports**: Human-readable web format with color-coded findings
 - **📈 Statistics**: Top risky resources, average risk scores, scan duration
 - **🔗 CI/CD Integration**: Configurable exit codes for automation
 
-### ⚙️ **Enterprise Features**
+### ⚙️ **Features**
 - **🏷️ Tag-based Filtering**: Skip resources based on environment tags
 - **📝 Detailed Remediation**: Step-by-step fix instructions with AWS CLI commands
 - **📋 Compliance Mapping**: CIS AWS, PCI-DSS, HIPAA, SOC2 framework alignment

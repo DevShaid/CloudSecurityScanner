@@ -1,6 +1,4 @@
-"""
-Unit tests for CloudGuard Enhanced scanner
-"""
+
 
 import pytest
 from unittest.mock import Mock, patch, MagicMock

@@ -1,7 +1,7 @@
 <p>
   <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDBwc3djNmo0NGtlZjYwem5qOGZ5cnU1YzNoZHpyYWcyczBrYzA2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pULj9CGmIcfuzXTPfp/giphy.gif" alt="Glowing Star" width="100">
   <br>
-  <b>⭐ Pretty Please Star this Repo if You Enjoy It! ⭐</b>
+  <b>⭐ :) Please Star this Repo if You Enjoy It! ⭐</b>
 </p>
 
 # 🛡️ CloudGuard - AWS Security Scanner

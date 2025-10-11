@@ -1,7 +1,4 @@
 #!/usr/bin/env python3
-"""
-Setup script for CloudGuard Enhanced
-"""
 
 from setuptools import setup, find_packages
 

@@ -5,9 +5,9 @@
 [![AWS](https://img.shields.io/badge/AWS-Security-orange.svg)](https://aws.amazon.com/)
 [![Enterprise Ready](https://img.shields.io/badge/Enterprise-Ready-green.svg)](https://github.com/your-org/cloudguard-enhanced)
 
-> **High-performance, production-ready AWS security scanner** that identifies misconfigurations and security issues across your AWS infrastructure. Optimized for enterprise environments with parallel scanning, comprehensive coverage, and CI/CD integration.
 
-## 🚀 Features
+
+##Features
 
 ### ⚡ **Performance & Scalability**
 - **🚀 Parallel Scanning**: ThreadPoolExecutor-based concurrent scanning for **5-10x speed improvement**
@@ -418,20 +418,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **📧 Email**: security-team@company.com
-- **💬 Slack**: #security-tools
+- **📧 Email**: shaidt137@gmail.com
 - **🐛 Issues**: [GitHub Issues](https://github.com/your-org/cloudguard-enhanced/issues)
 - **📖 Documentation**: [Wiki](https://github.com/your-org/cloudguard-enhanced/wiki)
 
-## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=your-org/cloudguard-enhanced&type=Date)](https://star-history.com/#your-org/cloudguard-enhanced&Date)
 
 ---
 
 <div align="center">
 
-**🛡️ CloudGuard Enhanced - Securing AWS Infrastructure, One Scan at a Time**
 
 [![GitHub stars](https://img.shields.io/github/stars/your-org/cloudguard-enhanced?style=social)](https://github.com/your-org/cloudguard-enhanced)
 [![GitHub forks](https://img.shields.io/github/forks/your-org/cloudguard-enhanced?style=social)](https://github.com/your-org/cloudguard-enhanced)

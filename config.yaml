@@ -1,0 +1,46 @@
+# CloudGuard Configuration
+scanner:
+  version: "2.0.0"
+  max_findings: 1000
+  fail_on_critical: false
+
+# AWS Configuration
+aws:
+  default_region: "us-east-1"
+  regions_to_scan:
+    - "us-east-1"
+    - "us-west-2"
+  
+# Scan Options
+scan_options:
+  include_s3: true
+  include_iam: true
+  include_ec2: true
+  include_rds: true
+  include_cloudtrail: true
+  include_ebs: true
+  include_kms: true
+  include_vpc: true
+  include_secrets: true
+  include_lambda: true
+
+# Exclusions
+exclusions:
+  buckets:
+    - "my-temp-bucket"
+    - "test-*"
+  security_groups:
+    - "sg-default"
+  
+# Reporting
+reporting:
+  json_output: "cloudguard_report.json"
+  html_output: "cloudguard_report.html"
+  include_metadata: true
+  sort_by_risk: true
+
+# Compliance Frameworks
+compliance:
+  enabled:
+    - "CIS_AWS"
+    - "PCI_DSS"

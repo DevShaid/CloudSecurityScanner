@@ -1,10 +1,6 @@
-<p>
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDBwc3djNmo0NGtlZjYwem5qOGZ5cnU1YzNoZHpyYWcyczBrYzA2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pULj9CGmIcfuzXTPfp/giphy.gif" alt="Glowing Star" width="100">
-  <br>
-  <b>⭐ :) Please Star this Repo if You Enjoy It! ⭐</b>
-</p>
 
-# 🛡️ CloudGuard - AWS Security Scanner
+
+# AWS Security Scanner
 
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -118,40 +114,6 @@ python cg.py --skip-services rds kms --json dev-report.json
 | `--skip-services` | Skip specific services | `None` |
 | `--fail-on-critical` | Exit with error code if critical findings found | `False` |
 
-## 📊 Performance Benchmarks
-
-### Large Account Performance
-| Account Size | Resources | Sequential Time | Parallel Time | Improvement |
-|--------------|-----------|-----------------|---------------|-------------|
-| **Small** | < 100 | ~30s | ~30s | 1x |
-| **Medium** | 100-1K | ~5 min | ~1-2 min | **3-5x** |
-| **Large** | 1K-10K | ~30 min | ~5-10 min | **5-6x** |
-| **Enterprise** | 10K+ | ~2 hours | ~15-30 min | **8-10x** |
-
-### Parallel Processing Benefits
-- **Sequential**: 10 services × 30s each = 5 minutes
-- **Parallel (8 workers)**: ~1-2 minutes total
-- **Large accounts**: 5-10x speed improvement
-
-## 🎯 Security Score
-
-The security score (0-100) is calculated based on findings:
-
-| Severity | Points Deducted | Response Time |
-|----------|----------------|---------------|
-| **🚨 Critical** | -15 points | Immediate attention required |
-| **⚠️ High** | -10 points | Fix within 24-48 hours |
-| **📊 Medium** | -5 points | Fix within 1 week |
-| **ℹ️ Low** | -2 points | Fix within 1 month |
-
-### Grade Scale
-- **🟢 A (90-100)**: Excellent security posture
-- **🟡 B (80-89)**: Good security with minor issues
-- **🟠 C (70-79)**: Acceptable with some concerns
-- **🔴 D (60-69)**: Poor security requiring attention
-- **⚫ F (0-59)**: Critical security issues
-
-## 📋 JSON Output Structure
 
 ```json
 {
@@ -181,7 +143,7 @@ The security score (0-100) is calculated based on findings:
 }
 ```
 
-## 🔗 CI/CD Integration
+## CI/CD Integration
 
 ### GitHub Actions
 ```yaml
@@ -263,7 +225,7 @@ security_scan:
     - develop
 ```
 
-## 🔐 Required AWS Permissions
+## Required AWS Permissions
 
 Create an IAM policy with the following permissions:
 
@@ -308,7 +270,7 @@ Create an IAM policy with the following permissions:
 }
 ```
 
-## 🏗️ Architecture
+## Architecture
 
 ```mermaid
 graph TB
@@ -341,7 +303,7 @@ graph TB
     N --> O
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Unit Tests
 ```bash
@@ -364,79 +326,3 @@ python -m pytest tests/integration/ --aws-profile test-profile
 python tests/benchmark.py --account-size large --workers 16
 ```
 
-## 📈 Roadmap
-
-### Version 2.1.0 (Q2 2024)
-- [ ] **Multi-region scanning** in single execution
-- [ ] **Custom compliance frameworks** (SOC2, ISO27001)
-- [ ] **Automated remediation** with dry-run mode
-- [ ] **Slack/Teams integration** for critical findings
-
-### Version 2.2.0 (Q3 2024)
-- [ ] **Azure support** for multi-cloud environments
-- [ ] **GCP support** for comprehensive cloud security
-- [ ] **Real-time monitoring** with continuous scanning
-- [ ] **Machine learning** for anomaly detection
-
-### Version 3.0.0 (Q4 2024)
-- [ ] **Web dashboard** for security posture visualization
-- [ ] **API endpoints** for programmatic access
-- [ ] **Custom rule engine** for organization-specific checks
-- [ ] **Compliance reporting** with executive summaries
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-### Development Setup
-```bash
-# Fork and clone the repository
-git clone https://github.com/your-username/cloudguard-enhanced.git
-cd cloudguard-enhanced
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install development dependencies
-pip install -r requirements-dev.txt
-
-# Run pre-commit hooks
-pre-commit install
-```
-
-### Submitting Changes
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **AWS Security Best Practices** for compliance guidelines
-- **CIS AWS Foundations Benchmark** for security controls
-- **Open source community** for feedback and contributions
-
-## 📞 Support
-
-- **📧 Email**: shaidt137@gmail.com
-- **🐛 Issues**: [GitHub Issues](https://github.com/your-org/cloudguard-enhanced/issues)
-- **📖 Documentation**: [Wiki](https://github.com/your-org/cloudguard-enhanced/wiki)
-
-
-
----
-
-<div align="center">
-
-
-[![GitHub stars](https://img.shields.io/github/stars/your-org/cloudguard-enhanced?style=social)](https://github.com/your-org/cloudguard-enhanced)
-[![GitHub forks](https://img.shields.io/github/forks/your-org/cloudguard-enhanced?style=social)](https://github.com/your-org/cloudguard-enhanced)
-[![GitHub watchers](https://img.shields.io/github/watchers/your-org/cloudguard-enhanced?style=social)](https://github.com/your-org/cloudguard-enhanced)
-
-</div>

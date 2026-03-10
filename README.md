@@ -10,60 +10,41 @@
 
 
 
-Current Features
-Performance & Scalability
-Parallel Scanning: ThreadPoolExecutor-based concurrent scanning for 5-10x speed improvement
+## Features
 
-Pagination Support: Handles AWS accounts with thousands of resources
+### Performance & Scalability
+- **Parallel Scanning**: ThreadPoolExecutor-based concurrent scanning for **5-10x speed improvement**
+- **Pagination Support**: Handles AWS accounts with **thousands of resources**
+- **Configurable Workers**: Adjust thread pool size based on your environment
+- **Real-time Progress**: Verbose mode shows live scanning progress
+- **Retry Logic**: Exponential backoff for robust API calls
 
-Configurable Workers: Adjust thread pool size based on your environment
+### Comprehensive Security Checks
+- **S3 Buckets**: Public access, encryption, versioning, MFA delete for sensitive buckets
+- **IAM Policies**: Root MFA, password policies, unused access keys (90+ days)
+- **EC2 Security Groups**: Public access rules, IPv6 support, overly permissive configurations
+- **RDS Instances**: Public accessibility, encryption, Multi-AZ configuration
+- **CloudTrail**: Trail existence, log validation, encryption
+- **EBS Volumes**: Encryption status, attached vs unattached volumes
+- **KMS Keys**: Key rotation status, policy validation, AWS-managed vs customer-managed
+- **VPC Flow Logs**: Flow log configuration for network monitoring
+- **Secrets Manager**: Rotation status, unused secrets, replication compliance
+- **Lambda Functions**: Deprecated runtimes, public URLs, overly permissive policies
 
-Real-time Progress: Verbose mode shows live scanning progress
+### Reporting
+- **Risk Scoring**: 0-100 scoring with severity-based deductions (A-F grades)
+- **Structured Output**: JSON with metadata for automation pipelines
+- **HTML Reports**: Human-readable web format with color-coded findings
+- **Statistics**: Top risky resources, average risk scores, scan duration
+- **CI/CD Integration**: Configurable exit codes for automation
 
-Retry Logic: Exponential backoff for robust API calls
+### Features
+- **Tag-based Filtering**: Skip resources based on environment tags
+- **Detailed Remediation**: Step-by-step fix instructions with AWS CLI commands
+- **Compliance Mapping**: CIS AWS, PCI-DSS, HIPAA, SOC2 framework alignment
+- **Configurable Severity**: Adjust fail-on-critical behavior for CI/CD
+- **Service Filtering**: Skip specific services for targeted scans
 
-Comprehensive Security Checks
-S3 Buckets: Public access, encryption, versioning, MFA delete for sensitive buckets
-
-IAM Policies: Root MFA, password policies, unused access keys (90+ days)
-
-EC2 Security Groups: Public access rules, IPv6 support, overly permissive configurations
-
-RDS Instances: Public accessibility, encryption, Multi-AZ configuration
-
-CloudTrail: Trail existence, log validation, encryption
-
-EBS Volumes: Encryption status, attached vs unattached volumes
-
-KMS Keys: Key rotation status, policy validation, AWS-managed vs customer-managed
-
-VPC Flow Logs: Flow log configuration for network monitoring
-
-Secrets Manager: Rotation status, unused secrets, replication compliance
-
-Lambda Functions: Deprecated runtimes, public URLs, overly permissive policies
-
-Reporting
-Risk Scoring: 0-100 scoring with severity-based deductions (A-F grades)
-
-Structured Output: JSON with metadata for automation pipelines
-
-HTML Reports: Human-readable web format with color-coded findings
-
-Statistics: Top risky resources, average risk scores, scan duration
-
-CI/CD Integration: Configurable exit codes for automation
-
-Features
-Tag-based Filtering: Skip resources based on environment tags
-
-Detailed Remediation: Step-by-step fix instructions with AWS CLI commands
-
-Compliance Mapping: CIS AWS, PCI-DSS, HIPAA, SOC2 framework alignment
-
-Configurable Severity: Adjust fail-on-critical behavior for CI/CD
-
-Service Filtering: Skip specific services for targeted scans
 ## Installation
 
 ### Prerequisites

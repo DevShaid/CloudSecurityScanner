@@ -5,7 +5,6 @@
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![AWS](https://img.shields.io/badge/AWS-Security-orange.svg)](https://aws.amazon.com/)
-[![Enterprise Ready](https://img.shields.io/badge/Enterprise-Ready-green.svg)](https://github.com/your-org/cloudguard-enhanced)
 
 
 
@@ -13,7 +12,7 @@
 ## Features
 
 ### Performance & Scalability
-- **Parallel Scanning**: ThreadPoolExecutor-based concurrent scanning for **5-10x speed improvement**
+- **Parallel Scanning**: ThreadPoolExecutor-based concurrent scanning across services and regions
 - **Pagination Support**: Handles AWS accounts with **thousands of resources**
 - **Configurable Workers**: Adjust thread pool size based on your environment
 - **Real-time Progress**: Verbose mode shows live scanning progress

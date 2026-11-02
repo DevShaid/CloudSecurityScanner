@@ -73,7 +73,7 @@ docker build -t cloudguard-enhanced .
 docker run -v ~/.aws:/root/.aws cloudguard-enhanced
 ```
 
-## 🚀 Usage
+## Usage
 
 ### Basic Scanning
 ```bash
